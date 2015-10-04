@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/leaseanalysis.css">
+	<script type="text/javascript" src="js/leaseanalysis.js"></script>
+	<title>Lease analysis tool</title>
+	
+</head>
+<body class="grid">
+	<header class="container">
+		<div class="row">
+			<h1 class="col-md-12 text-center">Lease Analysis Tool</h1>
+		</div>	
+	</header>
+	<section class="container">
+			<form id="carinputs" name="carinputs" class="row">
+				<div id="input" class="col-md-12">
+					<div>
+						<label>Sticker Price:</label>
+						<input class="pull-right" type="text" id="sticker" name="sticker" value="enter the sticker price here"  size="18px" />
+						<a href="#" title="This is pretty straight forward. It is the price on the window sticker or MSRP">?</a>
+					</div>
+				
+					<div>
+						<label>Invoice Amount:</label>
+						<input class="pull-right" type="text" id="invoice" name="invoice" value="enter the negotiated price in here" size="18px" />
+						<a href="#" title="This is the price you are actually paying for the car. You need to understand that a dealer wants to talk about monthly payment and when you negotiate a lease this is one of the 'flexible' numbers. I'll make it simpler to understand. As you negotaite this number down your monthly lease payment will go down as well. Even if you are only negotiating monthly payments just know that the dealer is more than likely playing with this number to bring it down">?</a>
+					</div>
+				
+					<div>
+						<label>Residual Value in %:</label>
+						<input class="pull-right" type="text" id="residual"  name="residual "value="as a decimal" size="18px" />
+						<a href="#" title="This figure represents what the left over value is of your current lease. It's usually an approximation determined by the banks. If you are using this to get an idea of payments a quick google search will usually help you find this number. Dealers sometimes artificially inflate this number to make leases more attractive">?</a>
+					</div>
+					
+					<div>
+						<label>Lease Term in Months:</label>
+						<input class="pull-right" type="text" id="term" name="term" value="in months" size="18px" />
+						<a href="#" title="This fairly straightforward number. Some common lease terms are 36 months and 39 months">?</a>
+					</div>
+					
+					<div>
+						<label>Interest:</label>
+						<input class="pull-right" type="text" id="interest" name="in" value="as a decimal" size="18px" />
+						<a href="#" title="Interest is also known as Money Factor. Again a quick google search usually will help you get this figure. If you have the APR rate divide it by 2400 and you will get the money factor (APR/2400) .">?</a>
+					</div>
+					
+					<div>
+						<label>Tax:</label>
+						<input class="pull-right" type="text" id="tax" value="as a decimal" size="18px" />
+					</div>
+				</div>
+				<div id="output" class="col-md-12 center-block">					
+					<div>Calculated Residual Value: 
+						<span id="residualvalue"></span>
+					</div><!--Sticker*residual %-->
+					
+					<div>Depreciation Amount: 
+						<span id="dpramount"></span>
+					</div><!--Invoice - residual -->
+								
+					<div>Depreciation Payment: 
+						<span id="dprpayment"> </span>
+					</div><!--depreciation / term in months -->
+					
+					<div>Interest Payment: 
+						<span id="intpayment"></span>
+					</div><!--(invoice - residual)*interest -->
+				
+					<div>Payment Before Tax: 
+						<span id="paymentbeforetax"></span>
+					</div><!--depreciation payment + interest payment -->
+				
+					<div>Lowest Possible Drive Off Amount: 
+						<span id="lowestdriveoffamount"></span>
+					</div><!--(payment before tax * tax)+payment before tax -->
+				</div>
+				
+			</form>
+			<div class="row">
+				<div id="buttonwrapper" class="col-md-12 text-center center-block">
+					<input class="text-center" type="button" value="calculate" Id="button" onClick="validate()"/>
+				</div>
+			</div>	
+			<div class="row"	
+				<p id="note" class="col-md-6">
+					<h6>*Please note that this assumes you pay bank fee, plates and other administrative related expenses out of pocket if you wish to include them in this calculation just add them to the invoice amount. Also, understand that this will give you a pretty good estimate of what you could expect to see at the dealership after a bit of work negotiating and this will by now means give you a concrete figure</h6>
+				</p>
+			</div>	
+		</div>
+	</section>
+</body>
+</html>
