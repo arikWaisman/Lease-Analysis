@@ -1,4 +1,3 @@
-
 *{
 	font-family: Verdana;
 }
@@ -14,14 +13,14 @@
 }
 
 .container {
-  width: 400px;
+  width: 768px;
   .center-block();
 }
 
 form{
 	line-height:28px;
 	font-weight: bold;
-	width: 400px;
+	width: 768px;
 }
 
 header{
@@ -56,7 +55,7 @@ label{
 
 input{
 	margin: 0em;
-    font: 11px '.HelveticaNeueDeskInterface-Regular', sans-serif;
+    font: 14px '.HelveticaNeueDeskInterface-Regular', sans-serif;
     text-rendering: auto;
     color: initial;
     letter-spacing: normal;
@@ -99,4 +98,19 @@ div>span {
 #button:active{
 	box-shadow: rgba(110,110,110, .8) 4px 4px 5px inset;
 	color: white;
+}
+
+@media (max-width: 767px) {
+
+	.container {
+  		width: 400px;
+  		.center-block();
+	}
+	form{
+	line-height:28px;
+	font-weight: bold;
+	width: 400px;
+	}
+
+
 }
