@@ -60,41 +60,41 @@ var validation = [sticker, invoice, residual, term, interest, tax];
 
 if (!sticker){
 	alert("all fields must be filled out");
-	document.getElementById("sticker").style.borderColor = "red";
-	return false;
+	document.getElementById("sticker").className = "alert alert-danger pull-right";
+	return false;	
 }
-document.getElementById("sticker").style.borderColor = "";
+document.getElementById("sticker").className = "alert alert-success pull-right";
 if(!invoice){
 	alert("all fields must be filled out");
-	document.getElementById("invoice").style.borderColor = "red";			
+	document.getElementById("invoice").className = "alert alert-danger pull-right";;			
 	return false;
 }
-document.getElementById("invoice").style.borderColor = "";
+document.getElementById("invoice").className = "alert alert-success pull-right"
 if(!residual){
 	alert("all fields must be filled out");
-	document.getElementById("residual").style.borderColor = "red";
+	document.getElementById("residual").className = "alert alert-danger pull-right";
 	return false;
 }
-document.getElementById("residual").style.borderColor = "";
+document.getElementById("residual").className = "alert alert-success pull-right"
 if(!term){
 	alert("all fields must be filled out");
-	document.getElementById("term").style.borderColor = "red";
+	document.getElementById("term").className = "alert alert-danger pull-right";
 	return false;
 }
-document.getElementById("term").style.borderColor = "";
+document.getElementById("term").className = "alert alert-success pull-right"
 if(!interest){
 	alert("all fields must be filled out");
-	document.getElementById("interest").style.borderColor = "red";
+	document.getElementById("interest").className = "alert alert-danger pull-right";
 	return false;
 }
-document.getElementById("interest").style.borderColor = "";
+document.getElementById("interest").className = "alert alert-success pull-right"
 if(!tax){
 	alert("all fields must be filled out");
-	document.getElementById("tax").style.borderColor = "red";
+	document.getElementById("tax").className = "alert alert-danger pull-right";
 	return false;
 }
 else{
-	document.getElementById("tax").style.borderColor = "";
+	document.getElementById("tax").className = "alert alert-success pull-right"
 	calculate();
 }
 };

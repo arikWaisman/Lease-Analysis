@@ -100,6 +100,25 @@ div>span {
 	color: white;
 }
 
+.alert{
+	border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0px;
+    margin-bottom:0px;
+
+}
+.alert-danger{
+	color: #a94442;
+    background-color: #f2dede;
+    border-color: red;
+
+}
+.alert-sucees{
+	color: #3c763d;
+    background-color: #dff0d8;
+    border-color: green;
+}
+
 @media (max-width: 767px) {
 
 	.container {
