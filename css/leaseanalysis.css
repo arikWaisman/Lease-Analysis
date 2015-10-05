@@ -7,14 +7,14 @@
 }
 
 .center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  	display: block;
+ 	margin-left: auto;
+ 	margin-right: auto;
 }
 
 .container {
-  width: 768px;
-  .center-block();
+	width: 768px;
+	.center-block();
 }
 
 form{
@@ -66,9 +66,11 @@ input{
     display: inline-block;
     text-align: start;
 }
+
 a{
 	text-decoration: none;
 }
+
 div>span {
 	color: blue;
 }
@@ -107,12 +109,14 @@ div>span {
     margin-bottom:0px;
 
 }
+
 .alert-danger{
 	color: #a94442;
     background-color: #f2dede;
     border-color: red;
 
 }
+
 .alert-sucees{
 	color: #3c763d;
     background-color: #dff0d8;
@@ -126,9 +130,9 @@ div>span {
   		.center-block();
 	}
 	form{
-	line-height:28px;
-	font-weight: bold;
-	width: 400px;
+		line-height:28px;
+		font-weight: bold;
+		width: 400px;
 	}
 
 
