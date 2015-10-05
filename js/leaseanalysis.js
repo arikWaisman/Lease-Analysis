@@ -40,6 +40,7 @@ var validation = [sticker, invoice, residual, term, interest, tax];
 	document.getElementById("lowestdriveoffamount").textContent = 
 	"$" + parseFloat(Math.round(lpdoAmount * 100) / 100).toFixed(2);
 };
+
 function validate(){
 var sticker = parseFloat(document.getElementById("sticker").value, 10);
 var invoice = parseFloat(document.getElementById("invoice").value, 10);
@@ -58,44 +59,44 @@ var validation = [sticker, invoice, residual, term, interest, tax];
 	}
 }*/
 
-if (!sticker){
-	alert("all fields must be filled out");
-	document.getElementById("sticker").className = "alert alert-danger pull-right";
-	return false;	
-}
-document.getElementById("sticker").className = "alert alert-success pull-right";
-if(!invoice){
-	alert("all fields must be filled out");
-	document.getElementById("invoice").className = "alert alert-danger pull-right";;			
-	return false;
-}
-document.getElementById("invoice").className = "alert alert-success pull-right"
-if(!residual){
-	alert("all fields must be filled out");
-	document.getElementById("residual").className = "alert alert-danger pull-right";
-	return false;
-}
-document.getElementById("residual").className = "alert alert-success pull-right"
-if(!term){
-	alert("all fields must be filled out");
-	document.getElementById("term").className = "alert alert-danger pull-right";
-	return false;
-}
-document.getElementById("term").className = "alert alert-success pull-right"
-if(!interest){
-	alert("all fields must be filled out");
-	document.getElementById("interest").className = "alert alert-danger pull-right";
-	return false;
-}
-document.getElementById("interest").className = "alert alert-success pull-right"
-if(!tax){
-	alert("all fields must be filled out");
-	document.getElementById("tax").className = "alert alert-danger pull-right";
-	return false;
-}
-else{
-	document.getElementById("tax").className = "alert alert-success pull-right"
-	calculate();
-}
+	if (!sticker){
+		alert("all fields must be filled out");
+		document.getElementById("sticker").className = "alert alert-danger pull-right";
+		return false;	
+	}
+	document.getElementById("sticker").className = "alert alert-success pull-right";
+	if(!invoice){
+		alert("all fields must be filled out");
+		document.getElementById("invoice").className = "alert alert-danger pull-right";;			
+		return false;
+	}
+	document.getElementById("invoice").className = "alert alert-success pull-right"
+	if(!residual){
+		alert("all fields must be filled out");
+		document.getElementById("residual").className = "alert alert-danger pull-right";
+		return false;
+	}
+	document.getElementById("residual").className = "alert alert-success pull-right"
+	if(!term){
+		alert("all fields must be filled out");
+		document.getElementById("term").className = "alert alert-danger pull-right";
+		return false;
+	}
+	document.getElementById("term").className = "alert alert-success pull-right"
+	if(!interest){
+		alert("all fields must be filled out");
+		document.getElementById("interest").className = "alert alert-danger pull-right";
+		return false;
+	}
+	document.getElementById("interest").className = "alert alert-success pull-right"
+	if(!tax){
+		alert("all fields must be filled out");
+		document.getElementById("tax").className = "alert alert-danger pull-right";
+		return false;
+	}
+	else{
+		document.getElementById("tax").className = "alert alert-success pull-right"
+		calculate();
+	}
 };
 	

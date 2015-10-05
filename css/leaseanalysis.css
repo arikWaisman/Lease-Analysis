@@ -65,6 +65,7 @@ input{
     text-shadow: none;
     display: inline-block;
     text-align: start;
+    padding: 0px;
 }
 
 a{
@@ -103,7 +104,7 @@ div>span {
 }
 
 .alert{
-	border: 1px solid transparent;
+	border: 2px solid transparent;
     border-radius: 4px;
     padding: 0px;
     margin-bottom:0px;
@@ -120,7 +121,6 @@ div>span {
 .alert-sucees{
 	color: #3c763d;
     background-color: #dff0d8;
-    border-color: green;
 }
 
 @media (max-width: 767px) {
