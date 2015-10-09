@@ -52,7 +52,7 @@ var validation = [sticker, invoice, residual, term, interest, tax];
 		
 /*for(i = 0; i < validation.length; i ++){
 	if(!validation[i].value){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		return false;
 	}
 	else{ calculate();
@@ -60,37 +60,37 @@ var validation = [sticker, invoice, residual, term, interest, tax];
 }*/
 
 	if (!sticker){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		document.getElementById("sticker").className = "alert alert-danger pull-right";
 		return false;	
 	}
 	document.getElementById("sticker").className = "alert alert-success pull-right";
 	if(!invoice){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		document.getElementById("invoice").className = "alert alert-danger pull-right";;			
 		return false;
 	}
 	document.getElementById("invoice").className = "alert alert-success pull-right"
 	if(!residual){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		document.getElementById("residual").className = "alert alert-danger pull-right";
 		return false;
 	}
 	document.getElementById("residual").className = "alert alert-success pull-right"
 	if(!term){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		document.getElementById("term").className = "alert alert-danger pull-right";
 		return false;
 	}
 	document.getElementById("term").className = "alert alert-success pull-right"
 	if(!interest){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		document.getElementById("interest").className = "alert alert-danger pull-right";
 		return false;
 	}
 	document.getElementById("interest").className = "alert alert-success pull-right"
 	if(!tax){
-		alert("all fields must be filled out");
+		alert("all fields must be filled out and be numbers (no commas)");
 		document.getElementById("tax").className = "alert alert-danger pull-right";
 		return false;
 	}
