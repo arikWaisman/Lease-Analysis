@@ -121,7 +121,6 @@ div>span {
 
 	.container {
   		width: 400px;
-  		.center-block();
 	}
 	form{
 		line-height:28px;

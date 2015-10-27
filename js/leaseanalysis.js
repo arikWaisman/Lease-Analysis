@@ -13,7 +13,7 @@ var intPayment = (invoice - residualValue) * interest;
 var paymentBeforeTax = dprPayment + intPayment;
 var tax = parseFloat(document.getElementById("tax").value, 10);
 var lpdoAmount = (paymentBeforeTax * tax) + paymentBeforeTax;
-var validation = [sticker, invoice, residual, term, interest, tax];
+//var validation = [sticker, invoice, residual, term, interest, tax];
 		
 
 	console.log(residualValue);
@@ -48,55 +48,53 @@ var residual = parseFloat(document.getElementById("residual").value, 10);
 var term = parseFloat(document.getElementById("term").value, 10);		
 var interest = parseFloat(document.getElementById("interest").value, 10);
 var tax = parseFloat(document.getElementById("tax").value, 10);
-var validation = [sticker, invoice, residual, term, interest, tax];
+var validation = [];
 		
-/*for(i = 0; i < validation.length; i ++){
-	if(!validation[i].value){
-		alert("all fields must be filled out and be numbers (no commas)");
-		return false;
-	}
-	else{ calculate();
-	}
-}*/
 
 	if (!sticker){
-		alert("all fields must be filled out and be numbers (no commas)");
-		document.getElementById("sticker").className = "alert alert-danger pull-right";
-		return false;	
+		validation.push(document.getElementById('sticker'));
+	} else{
+		document.getElementById("sticker").className = "alert alert-success pull-right";
 	}
-	document.getElementById("sticker").className = "alert alert-success pull-right";
+
 	if(!invoice){
-		alert("all fields must be filled out and be numbers (no commas)");
-		document.getElementById("invoice").className = "alert alert-danger pull-right";;			
-		return false;
+		validation.push(document.getElementById('invoice'));
+	} else {
+		document.getElementById("invoice").className = "alert alert-success pull-right";
 	}
-	document.getElementById("invoice").className = "alert alert-success pull-right"
+
 	if(!residual){
-		alert("all fields must be filled out and be numbers (no commas)");
-		document.getElementById("residual").className = "alert alert-danger pull-right";
-		return false;
+		validation.push(document.getElementById('residual'));
+	} else {
+		document.getElementById("residual").className = "alert alert-success pull-right";
 	}
-	document.getElementById("residual").className = "alert alert-success pull-right"
+
 	if(!term){
-		alert("all fields must be filled out and be numbers (no commas)");
-		document.getElementById("term").className = "alert alert-danger pull-right";
-		return false;
+		validation.push(document.getElementById('term'));
+	} else {
+		document.getElementById("term").className = "alert alert-success pull-right";
 	}
-	document.getElementById("term").className = "alert alert-success pull-right"
+
 	if(!interest){
-		alert("all fields must be filled out and be numbers (no commas)");
-		document.getElementById("interest").className = "alert alert-danger pull-right";
-		return false;
+		validation.push(document.getElementById('interest'));
+	} else {
+		document.getElementById("interest").className = "alert alert-success pull-right";
 	}
-	document.getElementById("interest").className = "alert alert-success pull-right"
+
 	if(!tax){
-		alert("all fields must be filled out and be numbers (no commas)");
-		document.getElementById("tax").className = "alert alert-danger pull-right";
-		return false;
+		validation.push(document.getElementById('tax'));	
+	} else {
+		document.getElementById("tax").className = "alert alert-success pull-right";
 	}
-	else{
-		document.getElementById("tax").className = "alert alert-success pull-right"
+	
+	if (validation.length == 0){
+
 		calculate();
+	} else {
+		for(i = 0; i < validation.length; i++){
+			validation[i].className = "alert alert-danger pull-right";
+		}
+		alert("all fields must be filled out and be numbers (no commas)");
 	}
 };
 	
