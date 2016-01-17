@@ -117,6 +117,16 @@ div>span {
     background-color: #dff0d8;
 }
 
+.error{
+	text-align: center;
+    border-radius: 5px;
+    color: #A94442;
+    background: #f2dede;
+    padding: 20px;
+    margin-top: 5px;
+
+}
+
 @media (max-width: 767px) {
 
 	.container {
