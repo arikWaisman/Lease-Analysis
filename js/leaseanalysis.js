@@ -9,7 +9,7 @@ function calculate(){
 	var term = parseFloat(document.getElementById("term").value, 10);
 	var dprPayment = dprAmount / term;
 	var interest = parseFloat(document.getElementById("interest").value, 10);
-	var intPayment = (invoice - residualValue) * interest;
+	var intPayment = (invoice + residualValue) * interest;
 	var paymentBeforeTax = dprPayment + intPayment;
 	var tax = parseFloat(document.getElementById("tax").value, 10);
 	var lpdoAmount = (paymentBeforeTax * tax) + paymentBeforeTax;		
